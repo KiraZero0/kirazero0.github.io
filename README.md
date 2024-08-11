@@ -1,5 +1,20 @@
 Welcome!
 
+SQL Functions
+
+Introduction
+SQL functions are essential to understand when creating a coherent Database. SQL Server has many built in functions which an administrator can utilize when creating tables and views. Some of these functions can assist the administrator in returning specific values when querying a table to create a view, such as using the Sum function to return the total added value of a particular column being queried or the format function which can assist in converting currencies or dates in a particular format as designated by the user. 
+
+Explain When You Would Use a SQL UDF
+A User-Defined Function is a crucial aspect of designing SQL databases. By utilizing various built-in functions to establish parameters, the user can return a single scalar value or set of values defined by the parameters in place within the UDF. This allows the user to view datasets based on complex calculations without having to create separate views or tables. UDFs are extremely beneficial, albeit more complex than creating views, as they can be executed at any point within the database once created and stored to provide various results without having to write the same code multiple times to query the database. Essentially, a UDF is a complex code or query which is created once, can be altered at any point to add constraints or parameters as needed, and used repeatedly within the database structure by simply entering the name of the UDF along with the specified value the user is attempting to calculate. 
+
+Explain the Difference Between Scalar, Inline, and Multi-Statement Functions
+There are several differences between the scalar, inline, and multi-statement user-defined functions as each type of function will return specific values or datasets based on their inherent parameters. Scalar functions will return only single values when utilized. An inline function is unique in that it will return a table when applied in the database. Inline functions are created as a UDF and will allow the administrator to return parameterized values when utilized, as opposed to views which will only return the single table that is queried within the code. Finally, a multi-statement function, like inline functions, will return a table with a series of rows and columns as defined within the UDF. Inline and multi-statement functions do not require a begin/end block when creating the statement and will rely on the Select statement as their output.
+
+Conclusion
+As discussed in this document, functions are essential for providing results based on complex calculations without the administrator having to perform said calculations on their own. As such, they create an efficient method for developing views and tables. When you add in the many benefits of User-Defined Functions along with the built-in functions, a user is able to save both time and energy by creating a code only once and reusing the function to return results at any time over and over again without having to type out the intricate code repeatedly.  
+
+
 Please see my latest SQL code below:
 
 --*************************************************************************--
@@ -325,3 +340,6 @@ Select * From fProductInventoriesWithPreviousMonthCountsWithKPIs(-1);
 
 
 /************************************************************
+
+
+
